@@ -14,4 +14,4 @@ Use
 
 * [1] 해당 패키지가 무거우면 람다에 올릴수 없기 때문에 필요한 모듈만 설치한다.
 * [2] package.json - dependencies 원하는 모듈만 넣어두고 npm install
-* [3] hander 설정을 파일 명에 맞추고 시작한다.
+* [3] lambda 핸들러 설정을 파일명과 일치 시킨후에 시작한다. => 초기 index.handler로 구성되어 있다.
