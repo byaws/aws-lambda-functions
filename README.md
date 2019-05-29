@@ -5,10 +5,13 @@
 Index
 --------
 
-[1] mysql : mysql connect && response data
+* mysql : mysql connect && response data
+* handler : handler를 통한 router 분리
+* hooks : https 모듈을 통하여 hooks bot (slack, jandi, jira 등)
 
 Use
 --------
+
 * [1] 해당 패키지가 무거우면 람다에 올릴수 없기 때문에 필요한 모듈만 설치한다.
 * [2] package.json - dependencies 원하는 모듈만 넣어두고 npm install
 * [3] hander 설정을 파일 명에 맞추고 시작한다.

@@ -12,16 +12,15 @@ const connection = mysql.createConnection({
 
 exports.handler = (event, context, callback) => {
 
-
   /** connection.connect()
  * : Every method you invoke on a connection is queued and executed in sequence.
- ** connection 성공 시 확인할 것
+ * connection 성공 시 확인할 것
  * : connection.threadId
  */
   connection.connect();
 
   /** connection.query()
-   ** 조인문 사용 시
+   * 조인문 사용 시
    * : var options = {sql: '...', nestTables: true};
    * : connection.query(options, function (error, results, fields) { ... }
    */
