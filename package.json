@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.468.0",
-    "mysql": "^2.17.1"
+    "https": "^1.0.0",
+    "mysql": "^2.17.1",
+    "util": "^0.12.0"
   }
 }
