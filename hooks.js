@@ -11,7 +11,6 @@ const responseHeaders = {
 };
 
 const responses = {
-
     success: (data = {}, code = 200) => {
         return {
             'statusCode': code,

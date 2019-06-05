@@ -1,4 +1,4 @@
-> Lambda,
+> Lambda, 06.05 UPDATE
 
 람다란, 서버를 프로비저닝하거나 관리하지 않고도 코드를 실행할 수 있게 해주는 컴퓨팅 서비스입니다.
 
@@ -8,6 +8,10 @@ Index
 * mysql : mysql connect && response data
 * handler : handler를 통한 router 분리
 * hooks : https 모듈을 통하여 hooks bot (slack, jandi, jira 등)
+* dynamo : AWS DynamoDB 데이터 저장
+* ses : AWS CostExplorer를 통해 가격정보를 AWS SES 사용하여 이메일 전송
+* sns : AWS SNS 사용하여 문자 전송
+* translate : AWS Translate 한국어를 영어로 번역 
 
 Use
 --------

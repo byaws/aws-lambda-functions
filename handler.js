@@ -24,7 +24,7 @@ const responses = {
 };
 
 module.exports = {
-    
+
     get_list: (event, context, callback) => {
         context.callbackWaitsForEmptyEventLoop = false;
 
@@ -85,4 +85,4 @@ module.exports = {
                 callback(null, responses.error(error));
             });
     }
-}
+};
