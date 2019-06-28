@@ -16,14 +16,14 @@ const responses = {
             'statusCode': code,
             'headers': responseHeaders,
             'body': JSON.stringify(data)
-        }
+        };
     },
     error: (error) => {
         return {
             'statusCode': error.code || 500,
             'headers': responseHeaders,
             'body': JSON.stringify(error)
-        }
+        };
     }
 };
 
@@ -54,8 +54,8 @@ exports.handler = (event, context, callback) => {
             });
         });
 
-        req.on('error', function (e) {
-            console.log('problem with request: ' + e.message);
+        req.on('error', function (error) {
+            console.log('problem with request: ' + error.message);
         });
 
         req.write(util.format("%j", postData));

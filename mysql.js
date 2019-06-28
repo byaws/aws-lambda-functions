@@ -26,7 +26,7 @@ exports.handler = (event, context, callback) => {
    */
   connection.query('SELECT * FROM BANK', function (error, results, fields) {
     if (error) {
-      console.error('[connection.query]error: ' + error);
+      console.error('[connection.query]error', error);
       return;
     }
 
@@ -42,11 +42,11 @@ exports.handler = (event, context, callback) => {
   connection.end(function (err) {
     // The connection is terminated now
     if (err) {
-      console.error('[connection.end]err: ' + err);
-      connection.destroy()
+      console.error('[connection.end]err', err);
+      connection.destroy();
       return;
     }
-    console.log('connection ended');
+    console.log('connection end');
   });
 
   /** connection.destroy();
@@ -55,7 +55,7 @@ exports.handler = (event, context, callback) => {
   // connection.destroy();
 
   /** connection.beginTransaction()
-   * : 트랜젝션관리. commit, rollback 예쩨 포함.
+   * : 트랜젝션관리. commit, rollback 예제 포함.
    */
   // connection.beginTransaction(function(err) {
   //      if (err) { throw err; }

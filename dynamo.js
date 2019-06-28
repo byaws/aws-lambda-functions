@@ -9,7 +9,7 @@ const dynamodb = new AWS.DynamoDB.DocumentClient();
 exports.handler = async (event) => {
 
     // 리턴할 값을 선언합니다.
-    let response
+    let response;
 
     // queryStringParameters즉 GET값들이 들어오는지 들어온다면 id가 있는지 체크합니다.
     if (!event.queryStringParameters || !event.queryStringParameters.id) {
@@ -27,10 +27,10 @@ exports.handler = async (event) => {
             TableName: "dynamo_apigateway_query"
         };
 
-        await dynamodb.put(params).promise().catch(e => {
+        await dynamodb.put(params).promise().catch(error => {
             response = {
                 statusCode: 500,
-                body: JSON.stringify("에러가 발생하였습니다." + e)
+                body: JSON.stringify("에러가 발생하였습니다.", error)
             };
             return response;
         })

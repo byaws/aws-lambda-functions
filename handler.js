@@ -12,14 +12,14 @@ const responses = {
             'statusCode': code,
             'headers': responseHeaders,
             'body': JSON.stringify(data)
-        }
+        };
     },
     error: (error) => {
         return {
             'statusCode': error.code || 500,
             'headers': responseHeaders,
             'body': JSON.stringify(error)
-        }
+        };
     }
 };
 

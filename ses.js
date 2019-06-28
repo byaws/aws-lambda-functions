@@ -75,7 +75,7 @@ exports.handler = function (event, context, callback) {
 
         new AWS.SES().sendEmail(params, function (err, result) {
             if (err) callback(err);
-            else (callback(null))
+            else callback(null, result);
         });
     });
 };

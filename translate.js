@@ -7,8 +7,6 @@ const translate = new AWS.Translate();
 
 exports.handler = function (event, context, callback) {
 
-  console.log(JSON.stringify(event.body));
-
   // event.body로 POST로 받은 데이터를 받습니다.
   const response = JSON.parse(event.body);
 
